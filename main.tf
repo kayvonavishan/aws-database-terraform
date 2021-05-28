@@ -34,5 +34,6 @@ resource "aws_db_instance" "rds_instance" {
   name                 = "stock_market"
   username             = "foo"
   password             = "foobar123"
+  publicly_accessible  = true
   skip_final_snapshot  = true
 }
