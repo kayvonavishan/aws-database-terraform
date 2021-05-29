@@ -9,4 +9,7 @@ deploy-job:
   script:
     - terraform init
     - terraform apply
+    - terraform output
+    - terraform output host_id > postgres_db_host_id
+    - type postgres_db_host_id
   when: manual
