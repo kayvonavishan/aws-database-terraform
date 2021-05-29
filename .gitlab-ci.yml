@@ -1,0 +1,7 @@
+default:
+  image: hashicorp/terraform:full
+
+build-job:
+  stage: build
+  script:
+    - terraform plan
