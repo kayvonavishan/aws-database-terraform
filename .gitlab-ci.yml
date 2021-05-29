@@ -1,5 +1,5 @@
-default:
-  image: hashicorp/terraform:full
+#default:
+#  image: hashicorp/terraform:full
 
 build-job:
   stage: build
