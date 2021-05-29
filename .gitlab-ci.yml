@@ -1,3 +1,5 @@
+#Default HOME = C:\Windows\System32\config\systemprofile -- aws creds stored there
+
 build-job:
   stage: build
   script:
@@ -12,4 +14,10 @@ deploy-job:
     - terraform output
     - terraform output host_id > postgres_db_host_id
     - type postgres_db_host_id
+  when: manual
+
+deploy-job:
+  stage: deploy
+  script:
+    - terraform destroy -auto-approve
   when: manual
