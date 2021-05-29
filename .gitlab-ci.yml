@@ -1,7 +1,12 @@
-#default:
-#  image: hashicorp/terraform:full
-
 build-job:
   stage: build
   script:
+    - terraform init
     - terraform plan
+
+deploy-job:
+  stage: deploy
+  script:
+    - terraform init
+    - terraform apply
+  when: manual
