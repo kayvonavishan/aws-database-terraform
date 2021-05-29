@@ -8,7 +8,7 @@ deploy-job:
   stage: deploy
   script:
     - terraform init
-    - terraform apply
+    - terraform apply -auto-approve
     - terraform output
     - terraform output host_id > postgres_db_host_id
     - type postgres_db_host_id
