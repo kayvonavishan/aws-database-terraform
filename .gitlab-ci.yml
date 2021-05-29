@@ -19,5 +19,6 @@ terraform-apply:
 terraform-destroy:
   stage: deploy
   script:
+    - terraform init
     - terraform destroy -auto-approve
   when: manual
