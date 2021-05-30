@@ -1,3 +1,9 @@
+terraform {
+  backend "local" {
+    path = "C:/terraform_state/aws-database-terraform"
+  }
+}
+
 provider "aws" {
   region = "us-east-2"
 }
